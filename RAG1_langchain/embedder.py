@@ -1,5 +1,3 @@
-# embedder.py
-
 from langchain_huggingface import HuggingFaceEmbeddings
 from config import EMBEDDING_MODEL
 

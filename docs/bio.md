@@ -1,4 +1,4 @@
-Slimene Fellah is a software engineer based in Algiers, Algeria. With a strong foundation in computer science, he has accumulated over 5 years of professional experience specializing in full-stack development, artificial intelligence, and cloud computing. His technical expertise spans a wide range of programming languages and frameworks, including Python, JavaScript, React, Node.js, and TensorFlow.
+Slimene Fellah is a software engineer based in Oran, Algeria. With a strong foundation in computer science, he has accumulated over 5 years of professional experience specializing in full-stack development, artificial intelligence, and cloud computing. His technical expertise spans a wide range of programming languages and frameworks, including Python, JavaScript, React, Node.js, and TensorFlow.
 
 He earned his Bachelor's degree in Computer Science from the University of Algiers in 2018, where he graduated with honors. Driven by a passion for data-driven solutions, Slimene pursued and completed a Master's in Data Science in 2021, focusing his thesis on scalable machine learning algorithms for real-time analytics.
 

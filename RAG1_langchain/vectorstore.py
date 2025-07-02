@@ -1,5 +1,3 @@
-# vectorstore.py
-
 from langchain_community.vectorstores import Chroma
 from embedder import get_embedder
 from config import CHROMA_DB_DIR

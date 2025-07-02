@@ -7,7 +7,7 @@ from config import CACHE_FILE
 
 
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
-SIMILARITY_THRESHOLD = 0.9
+SIMILARITY_THRESHOLD = 0.9 # Adjust as needed
 
 model = SentenceTransformer(EMBEDDING_MODEL)
 
@@ -29,6 +29,9 @@ def get_cached_answer(query):
         emb = np.array(entry["embedding"])
         sim = cosine_similarity([query_emb], [emb])[0][0]
         if sim > SIMILARITY_THRESHOLD:
+            print("A similar query already exists in the cache.")
+            print(f"Cached Query: {entry['query']}")
+            print(f"Cached Answer: {entry['answer']}")
             return entry["answer"]
 
     return None

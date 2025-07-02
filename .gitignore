@@ -106,3 +106,8 @@ chroma_db/
 **/chroma_db/
 **/chroma_db/**
 
+# Cache files
+RAG1_langchain/query_cache.json
+RAG1_langchain/.file_hashes.json
+query_cache.json
+**/query_cache.json
