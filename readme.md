@@ -10,8 +10,19 @@ This repository documents my journey in building Retrieval-Augmented Generation 
 
 ## Getting Started
 
-1. Clone the repository.
-2. Follow the instructions in each section to explore different RAG setups.
+1. **Clone the repository.**
+2. **Install and run Ollama with Llama 2:**
+    - Download and install Ollama from [https://ollama.com/download](https://ollama.com/download).
+    - After installation, open a terminal and run:
+      ```sh
+      ollama pull llama2
+      ```
+    - Start the Ollama server (if not already running):
+      ```sh
+      ollama serve
+      ```
+    - This will make the Llama 2 model available locally for all RAG experiments in this repository.
+3. **Follow the instructions in each section to explore different RAG setups.**
 
 ## About
 

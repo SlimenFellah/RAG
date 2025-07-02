@@ -100,3 +100,9 @@ Desktop.ini
 
 # Rope project settings
 .ropeproject/
+
+
+chroma_db/
+**/chroma_db/
+**/chroma_db/**
+
