@@ -11,6 +11,9 @@ This repository documents my journey in building Retrieval-Augmented Generation 
 ## Getting Started
 
 1. **Clone the repository.**
+   ```bash
+   git clone https://github.com/SlimenFellah/RAG.git
+   ```
 2. **Install and run Ollama with Llama 2:**
     - Download and install Ollama from [https://ollama.com/download](https://ollama.com/download).
     - After installation, open a terminal and run:
@@ -27,3 +30,11 @@ This repository documents my journey in building Retrieval-Augmented Generation 
 ## About
 
 This repo is intended for learning and experimentation with RAG systems, showcasing the evolution from basic to advanced solutions.
+
+## Contributing
+
+Contributions are welcome! If you have ideas, improvements, or bug fixes, feel free to open a pull request. You can also raise issues or check existing ones in the [Issues](https://github.com/SlimenFellah/RAG/issues) section to help improve the project.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
