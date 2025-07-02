@@ -18,3 +18,7 @@ else:
 query = input("Enter your question: ")
 result = ask_question(query)
 print("\nAnswer:\n", result["result"])
+
+if result["cached"]:
+    print("\n(Cached result)")
+print("\nAnswer:\n", result["result"])

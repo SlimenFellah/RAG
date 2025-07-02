@@ -1,9 +1,9 @@
-# rag_pipeline.py
-
 from langchain.chains import RetrievalQA
 from langchain_ollama import OllamaLLM
 from vectorstore import load_vectorstore
 from config import OLLAMA_MODEL
+from cache import get_cached_answer, cache_answer
+
 
 def build_rag_chain():
     llm = OllamaLLM(model=OLLAMA_MODEL)
@@ -12,5 +12,15 @@ def build_rag_chain():
     return RetrievalQA.from_chain_type(llm=llm, retriever=retriever)
 
 def ask_question(query: str):
+    # Check cache
+    cached = get_cached_answer(query)
+    if cached:
+        return {"result": cached, "cached": True}
+
+    # Run chain
     chain = build_rag_chain()
-    return chain.invoke(query)
+    result = chain.invoke(query)["result"]
+
+    # Save to cache
+    cache_answer(query, result)
+    return {"result": result, "cached": False}
