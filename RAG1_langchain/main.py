@@ -45,7 +45,12 @@ if updated_files:
             chunks = splitter.split_documents(docs)
 
             # 🧹 Remove old chunks by source
-            vectorstore.delete(filter={"source": filepath})
+            # vectorstore.delete(filter={"source": filepath})
+            # vectorstore.delete(where={"source": filepath})
+            # Get the collection and delete by metadata
+            collection = vectorstore._collection
+            collection.delete(where={"source": filepath})
+
 
             all_chunks.extend(chunks)
 
@@ -75,7 +80,11 @@ if deleted_files:
     if proceed_delete == 'y':
         vectorstore = load_vectorstore()
         for filepath in deleted_files:
-            vectorstore.delete(filter={"source": filepath})
+            # vectorstore.delete(filter={"source": filepath})
+            # vectorstore.delete(where={"source": filepath})
+            # Get the collection and delete by metadata
+            collection = vectorstore._collection
+            collection.delete(where={"source": filepath})
         print("✅ Removed vectors from deleted files.")
         # Remove cache entries possibly based on deleted files
         deleted_doc_texts = []  # Load file content if you backed it up
