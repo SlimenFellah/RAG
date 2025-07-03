@@ -10,13 +10,6 @@ from vectorstore import load_vectorstore
 from config import DOCS_PATH
 from cache_cleaner import clean_query_cache_on_doc_change
 
-# Step 1: Build vectorstore only if it doesn't exist
-# if not os.path.exists(CHROMA_DB_DIR):
-#     print("Indexing documents...")
-#     docs = load_and_split_documents()
-#     get_vectorstore(docs).persist()
-# else:
-#     print("Using existing Chroma vector DB.")
 
 current_hashes = scan_documents(DOCS_PATH)
 old_hashes = load_tracked_hashes()
@@ -64,7 +57,6 @@ if updated_files:
         print("\n⏩ Skipped indexing. No changes were made to the vector DB.")
 else:
     print("✅ No new or changed files detected. Using existing Chroma vector DB.")
-
 
 def get_deleted_files(old_hashes, current_hashes):
     return [path for path in old_hashes if path not in current_hashes]
