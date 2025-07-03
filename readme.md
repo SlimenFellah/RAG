@@ -2,6 +2,8 @@
 
 This repository documents my journey in building Retrieval-Augmented Generation (RAG) systems, starting from simple implementations and progressing to more complex architectures. The goal is to experiment, learn, and share insights about RAG techniques and their applications.
 
+![RAG System Architecture](RagArchitecture.png)
+
 ## Contents
 
 - Step-by-step RAG system implementations
